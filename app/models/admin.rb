@@ -7,5 +7,4 @@ class Admin < ApplicationRecord
   def devise_mailer
     AdminMailer
   end
-
 end

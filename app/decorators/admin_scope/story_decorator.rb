@@ -1,5 +1,5 @@
 module AdminScope
-  class MainDecorator < ApplicationDecorator
+  class StoryDecorator < ApplicationDecorator
     delegate_all
 
     # Define presentation-specific methods here. Helpers are accessed through

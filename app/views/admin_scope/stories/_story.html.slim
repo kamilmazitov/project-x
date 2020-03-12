@@ -1,0 +1,8 @@
+article.article-row
+  .article-row-content
+    h1.article-row-content-header = story.title
+    p.article-row-content-description = truncate(story.content, length: 100)
+      = link_to " Read more", [ :admin_scope, story ]
+    time.article-row-content-time = l story.created_at, format: :default
+    br
+    = link_to "Edit", [:edit, :admin_scope, story], class: 'button'
