@@ -1,4 +1,4 @@
-class DeviseMailer < Devise::Mailer
+class UserMailer < Devise::Mailer
   layout "mailer"
 
   protected

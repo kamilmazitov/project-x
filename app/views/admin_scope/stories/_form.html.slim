@@ -1,0 +1,7 @@
+= simple_form_for [:admin_scope, story] do |f|
+  = f.input :title
+  = f.input :content
+  = f.input :published
+  = f.button :submit, 'Сохранить', class: 'success button'
+  = link_to 'Отменить', admin_scope_stories_path, class: 'button'
+  = link_to 'Удалить', [:admin_scope, story], class: 'alert button', method: :delete, data: { confirm: 'Действительно хотите удалить?' } if story.persisted?
