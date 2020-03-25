@@ -12,30 +12,37 @@ module AdminScope
     end
 
     def create
-      story.save
-      redirect_to admin_scope_stories_path
+      if story.save
+        redirect_to admin_scope_stories_path, notice: "Story was successfully created"
+      else
+        flash.now[:alert] = "Failed to create story"
+        render :new
+      end
     end
 
     def show
     end
 
     def update
-      story.update(story_params)
-      story.save
-
-      respond_with :admin_scope, story
+      if story.update(story_params)
+        story.save
+        respond_with :admin_scope, story, notice: "Story was successfully updated"
+      else
+        flash.now[:alert] = "Failed to update story"
+        render :edit
+      end
     end
 
     def edit
     end
 
-  def destroy
-    if story.destroy
-      redirect_to admin_scope_stories_path, notice: "Story was successfuly deleted"
-    else
-      redirect_to admin_scope_stories_path, alert: "Story wasn't delete"
+    def destroy
+      if story.destroy
+        redirect_to admin_scope_stories_path, notice: "Story was successfully deleted"
+      else
+        redirect_to admin_scope_stories_path, alert: "Story wasn't delete"
+      end
     end
-  end
 
     private
 

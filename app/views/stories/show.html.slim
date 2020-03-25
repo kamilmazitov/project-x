@@ -1,0 +1,4 @@
+.row
+  h2.article-row-section-header = story.title
+  p.article-row-content-description = story.content.html_safe
+  time.article-row-content-time = l story.created_at, format: :default

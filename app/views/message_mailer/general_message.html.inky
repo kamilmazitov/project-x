@@ -1,0 +1,9 @@
+<container>
+  <row>
+    <columns>
+      <p class="text-center">
+        <%= @message.message %>
+      </p>
+    </columns>
+  </row>
+</container>

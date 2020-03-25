@@ -1,7 +1,6 @@
 .row
   h2.article-row-section-header = story.title
   p.article-row-content-description = story.content.html_safe
-        = link_to " Read more", [ :admin_scope, story ]
   time.article-row-content-time = l story.created_at, format: :default
   br
   = link_to "Edit", [:edit, :admin_scope, story], class: 'button'

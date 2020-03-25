@@ -2,6 +2,6 @@
   = f.input :title
   = f.input :content
   = f.input :published
-  = f.button :submit, 'Сохранить', class: 'success button'
-  = link_to 'Отменить', admin_scope_stories_path, class: 'button'
-  = link_to 'Удалить', [:admin_scope, story], class: 'alert button', method: :delete, data: { confirm: 'Действительно хотите удалить?' } if story.persisted?
+  = f.button :submit, 'Save', class: 'success button'
+  = link_to 'Cancel', admin_scope_stories_path, class: 'button'
+  = link_to 'Delete', [:admin_scope, story], class: 'alert button', method: :delete, data: { confirm: "Are you sure you want to delete?" } if story.persisted?
