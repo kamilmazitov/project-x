@@ -1,5 +1,5 @@
 .top-bar-left
   ul.menu
-    li = link_to "Project X", root_path, class: "menu-text"
-    / - if admin_signed_in?
-    /   = active_link_to "Home", root_path, active: :exclusive, wrap_tag: :li
+    li = link_to "Project X", admin_scope_root_path, class: "menu-text"
+    - if admin_signed_in?
+      li = active_link_to "Stories", admin_scope_stories_path, active: :exclusive, wrap_tag: :li

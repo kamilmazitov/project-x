@@ -1,0 +1,7 @@
+- if story.published?
+  article.article-row
+    .article-row-content
+        h1.article-row-content-header = story.title
+        p.article-row-content-description = truncate(story.content, length: 100)
+          = link_to " Read more", story_path(story)
+        time.article-row-content-time = l story.created_at, format: :default
