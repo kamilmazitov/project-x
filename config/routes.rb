@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
   devise_for :admins, controllers: { sessions: "admin_scope/sessions",
                                      passwords: "admin_scope/passwords" }
+
   devise_for :users, controllers: { registrations: "users/registrations" }
   root to: "pages#home"
   resources :stories, only: %i[index show]
