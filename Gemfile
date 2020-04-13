@@ -9,7 +9,7 @@ gem "rails", "5.1.6.2"
 gem "autoprefixer-rails"
 gem "coffee-rails"
 gem "foundation-icons-sass-rails"
-gem "foundation-rails"
+gem "foundation-rails", "~> 6.2.3.0"
 gem "premailer-rails"
 gem "sass-rails", "~> 5.0.0", ">= 5.0.6"
 gem "uglifier", ">= 2.7.2"
@@ -45,6 +45,7 @@ gem "responders"
 gem "rollbar"
 gem "seedbank"
 gem "stackprof"
+gem 'fog-aws'
 
 group :staging, :production do
   gem "newrelic_rpm"
@@ -78,7 +79,7 @@ group :development, :test do
   gem "jasmine", "> 2.0"
   gem "jasmine-jquery-rails"
   gem "rspec-rails", "~> 3.5"
-  gem "rubocop", require: false
+  gem "rubocop", "0.49.1", require: false
   gem "rubocop-rspec", require: false
   gem "scss_lint", require: false
   gem "slim_lint", require: false

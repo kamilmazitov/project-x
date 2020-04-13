@@ -8,7 +8,8 @@ Rails.application.routes.draw do
   end
 
   devise_for :admins, controllers: { sessions: "admin_scope/sessions",
-                                     passwords: "admin_scope/passwords" }
+                                     passwords: "admin_scope/passwords",
+                                     registrations: "admin_scope/registrations" }
 
   devise_for :users, controllers: { registrations: "users/registrations" }
   root to: "pages#home"
