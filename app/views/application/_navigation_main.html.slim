@@ -5,5 +5,3 @@
     li = active_link_to "About me", about_me_path, active: :exclusive, wrap_tag: :li
     li = active_link_to "Contact me", contact_path, active: :exclusive, wrap_tag: :li
     li = active_link_to "Articles", stories_path, active: :exclusive, wrap_tag: :li
-    - if user_signed_in?
-      = active_link_to "Home", root_path, active: :exclusive, wrap_tag: :li
