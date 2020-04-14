@@ -8,8 +8,8 @@ feature "Update Account" do
   end
 
   scenario "Admin updates account with valid data" do
-    fill_form(:admin, :edit, first_name: "New Name")
-    fill_form(:admin, :edit, last_name: "New Surname")
+    attrs = {first_name: "New Name", last_name: "New Surname"}
+    fill_form(:admin, :edit, attrs)
     click_on "Update"
 
     expect(page).to have_content("Your account has been updated successfully.")

@@ -8,8 +8,8 @@ feature "Create story" do
   end
 
   scenario "Admin create story" do
-    fill_form(:story, :new, title: "Title")
-    fill_form(:story, :new, content: "Some content")
+    attrs = {title: "Title", content: "Some content"}
+    fill_form(:story, :new, attrs)
     click_on "Save"
 
     expect(page).to have_content("Title")
